@@ -18,7 +18,7 @@ function GetAxios() {
    return (
     <>
     {
-      my_data.map((item) => {
+      data.map((item) => {
         const {id, title, body} = item;
         return (
           <div className='data' key={id}>
