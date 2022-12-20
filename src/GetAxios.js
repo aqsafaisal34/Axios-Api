@@ -15,19 +15,20 @@ function GetAxios() {
             console.log(error)
         })
     })
-  return (
+   return (
     <>
-      {data.map((item,index)=>{
-        return(
-            
-      <>
-        key={index}
-       <h2>title={item.title}</h2>
-       <h3>body={item.body}</h3>
-       </>
+    {
+      my_data.map((item) => {
+        const {id, title, body} = item;
+        return (
+          <div className='data' key={id}>
+          <h1>{id}</h1>
+          <h2>{title.slice(0,10)}</h2>
+          <h3>{body.slice(0,50).toUpperCase()}</h3>
+          </div>
         )
       })
-      }
+    }
     </>
   )
 }
